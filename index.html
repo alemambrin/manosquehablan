@@ -865,6 +865,8 @@ function closeModal(){
 }
 function closeModalOutside(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+window.closeModal=closeModal;
+window.closeModalOutside=closeModalOutside;
 
 // ── DACTILOLÓGICO ───────────────────────────────────────────────────────────
 var AC='#4EB8FF';
@@ -1296,10 +1298,4 @@ function handleQuiz(txt){
       window.rAnswer(W[i].w); return;
     }
   }
-  bot('¿Podés elegir una de las opciones de arriba? 😅', 500);
-}
-
-})();
-</script>
-</body>
-</html>
+  bot('¿Podés elegir una d
